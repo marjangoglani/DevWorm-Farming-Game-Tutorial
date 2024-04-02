@@ -100,10 +100,10 @@ animations = [{
 script = ExtResource("1_cvvxd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_ogc6y")
-animation = &"idle"
-frame_progress = 0.179693
+animation = &"upwalk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
