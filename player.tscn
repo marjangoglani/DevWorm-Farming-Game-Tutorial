@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dv5u68y0lnkl4"]
+[gd_scene load_steps=14 format=3 uid="uid://dv5u68y0lnkl4"]
 
 [ext_resource type="Texture2D" uid="uid://bmmxus8kgmb1m" path="res://farmingTilesheetComplete.png" id="1_76pmp"]
+[ext_resource type="Script" path="res://player.gd" id="1_cvvxd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_et54g"]
 atlas = ExtResource("1_76pmp")
@@ -13,6 +14,22 @@ region = Rect2(16, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ed3m"]
 atlas = ExtResource("1_76pmp")
 region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gy4e4"]
+atlas = ExtResource("1_76pmp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kau1w"]
+atlas = ExtResource("1_76pmp")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmjen"]
+atlas = ExtResource("1_76pmp")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcaun"]
+atlas = ExtResource("1_76pmp")
+region = Rect2(128, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8roe5"]
 atlas = ExtResource("1_76pmp")
@@ -44,6 +61,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_gy4e4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kau1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmjen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcaun")
+}],
+"loop": true,
+"name": &"sidewalk",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8roe5")
 }, {
 "duration": 1.0,
@@ -58,13 +97,13 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvvxd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_ogc6y")
-animation = &"downwalk"
-frame = 1
-frame_progress = 0.926546
+animation = &"idle"
+frame_progress = 0.179693
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
