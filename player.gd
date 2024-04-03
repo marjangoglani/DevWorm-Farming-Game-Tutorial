@@ -13,15 +13,15 @@ func animation_player():
 	# velocity[1] = y
 	if velocity[0] == 0.0 && velocity[1] == 0.0: # idle
 		%AnimatedSprite2D.play("idle")
-	if velocity[0] > 0.0: # walking right
+	elif velocity[0] > 0.0: # walking right
 		%AnimatedSprite2D.play("sidewalk")
 		%AnimatedSprite2D.flip_h = true
-	if velocity[0] < 0.0: # walking left
+	elif velocity[0] < 0.0: # walking left
 		%AnimatedSprite2D.play("sidewalk")
 		%AnimatedSprite2D.flip_h = false
-	if velocity[1] > 0.0: # walking down
+	elif velocity[1] > 0.0: # walking down
 		%AnimatedSprite2D.play("downwalk")
-	if velocity[1] < 0.0: # walking up
+	elif velocity[1] < 0.0: # walking up
 		%AnimatedSprite2D.play("upwalk")
 	
 		
