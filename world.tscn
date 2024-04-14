@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bj2g6i5w1a5db"]
+[gd_scene load_steps=13 format=3 uid="uid://bj2g6i5w1a5db"]
 
 [ext_resource type="Texture2D" uid="uid://bmmxus8kgmb1m" path="res://farmingTilesheetComplete.png" id="1_nn3ch"]
 [ext_resource type="Script" path="res://world.gd" id="1_x5k5a"]
 [ext_resource type="Texture2D" uid="uid://di0b4hxfnrh4h" path="res://Paradise_Asset_Pack_FREE/TileSets/terrains/Terrains_Dirt_Grass_Sand_Cliffs.png" id="2_10trm"]
 [ext_resource type="PackedScene" uid="uid://dv5u68y0lnkl4" path="res://player.tscn" id="2_kwh34"]
 [ext_resource type="Texture2D" uid="uid://da7tpxjndhqtj" path="res://Paradise_Asset_Pack_FREE/FOR_TUTORIAL/tilemap1.png" id="4_s1gew"]
+[ext_resource type="PackedScene" uid="uid://cvs88eultv78s" path="res://inventoryGUI.tscn" id="6_b1qg7"]
+[ext_resource type="Script" path="res://inventoryGUI.gd" id="7_hmi0c"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_32i5d"]
 tile_data = PackedInt32Array(0, 196608, 6, 65536, 196608, 7, 131072, 196608, 7, 196608, 196608, 7, 262144, 196608, 8, 1, 262144, 6, 65537, 262144, 7, 131073, 262144, 7, 196609, 262144, 7, 262145, 262144, 8, 2, 262144, 6, 65538, 262144, 7, 131074, 262144, 7, 196610, 262144, 7, 262146, 262144, 8, 3, 262144, 6, 65539, 262144, 7, 131075, 262144, 7, 196611, 262144, 7, 262147, 262144, 8, 4, 262144, 6, 65540, 262144, 7, 131076, 262144, 7, 196612, 262144, 7, 262148, 262144, 8, 5, 262144, 6, 65541, 262144, 7, 131077, 262144, 7, 196613, 262144, 7, 262149, 262144, 8, 6, 327680, 6, 65542, 327680, 7, 131078, 327680, 7, 196614, 327680, 7, 262150, 327680, 8)
@@ -1004,3 +1006,19 @@ layer_5/tile_data = PackedInt32Array()
 [node name="Player" parent="." instance=ExtResource("2_kwh34")]
 y_sort_enabled = true
 position = Vector2(157, 30)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="inventoryGUI" parent="CanvasLayer" instance=ExtResource("6_b1qg7")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -102.0
+offset_top = -37.0
+offset_right = 102.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("7_hmi0c")

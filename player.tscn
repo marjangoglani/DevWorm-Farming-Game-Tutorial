@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dv5u68y0lnkl4"]
+[gd_scene load_steps=15 format=3 uid="uid://dv5u68y0lnkl4"]
 
 [ext_resource type="Texture2D" uid="uid://bmmxus8kgmb1m" path="res://farmingTilesheetComplete.png" id="1_76pmp"]
 [ext_resource type="Script" path="res://player.gd" id="1_cvvxd"]
+[ext_resource type="Resource" uid="uid://c2wpv36v77w04" path="res://Inventory/playerInventory.tres" id="2_y32sf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_et54g"]
 atlas = ExtResource("1_76pmp")
@@ -98,6 +99,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_cvvxd")
+inventory = ExtResource("2_y32sf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
