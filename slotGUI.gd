@@ -9,5 +9,5 @@ func update(item: InventoryItem):
 		itemSprite.visible = false
 	else:
 		backgroundSprite.frame = 1
-		itemSprite.frame = 1
+		itemSprite.visible = true
 		itemSprite.texture = item.texture
